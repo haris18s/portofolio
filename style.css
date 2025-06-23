@@ -15,6 +15,7 @@ body{
     font-family: "Sacramento", cursive;
 }
 
+/* home-page class it is universla in body now so dont need to specify it in html for h2*/
 .home-page h2{
     color: #d6890e;
     font-family: "Noto Sans", serif;
@@ -75,7 +76,6 @@ hr {
 
 
 
-<!-- #VIB_page-->
 
 .VIB-model_page h1 {
     color: black;
@@ -87,9 +87,11 @@ hr {
     ;
 }
 .image-container {
-    display: flex;
-    justify-content: flex-start;
-    margin:1rem 0;
+    text-align: left;
+    padding: 1rem;
 }
 
-.h2  {}
+.pipeline-img {
+  max-width: 40%;
+  height: auto;
+}
