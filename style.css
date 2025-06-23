@@ -7,14 +7,15 @@ body{
     height: 200px;
     border-radius: 40%;
 }
-h1 {
+
+.home-page h1 {
     color: #94aeae;
     font-size: 5rem;
     margin: 50px auto 0 auto;
     font-family: "Sacramento", cursive;
 }
 
-h2{
+.home-page h2{
     color: #d6890e;
     font-family: "Noto Sans", serif;
     font-size: 3rem;
@@ -70,3 +71,25 @@ hr {
 .skills-img1 img, .skills-img3 img {
     width: 70%;
 }
+
+
+
+
+<!-- #VIB_page-->
+
+.VIB-model_page h1 {
+    color: black;
+}
+
+.pipeline-img {
+    height: 450px;
+    position: relative;
+    ;
+}
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    margin:1rem 0;
+}
+
+.h2  {}
