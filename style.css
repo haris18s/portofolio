@@ -1,15 +1,14 @@
 
 body{
     text-align: center;
+    padding-top: 55px;
+
 }
 
-.my-img{
-    height: 200px;
-    border-radius: 40%;
-}
+/* Home page styling   */
 
 .home-page h1 {
-    color: #94aeae;
+    color: #f3f3f3;
     font-size: 5rem;
     margin: 50px auto 0 auto;
     font-family: "Sacramento", cursive;
@@ -17,31 +16,99 @@ body{
 
 /* home-page class it is universla in body now so dont need to specify it in html for h2*/
 .home-page h2{
-    color: #d6890e;
+    color: #efaf49;
     font-family: "Noto Sans", serif;
     font-size: 3rem;
 
 }
 
 .top-container{
-    background-color: #e4f9f5;
-    position: relative;
-    padding-top: 80px;
+  background: linear-gradient(135deg, #e4f9f5 0%, #f4fefb 50%, #fff8ec 100%);
 }
 
 
-.clouds-img{
-    position: absolute;
-    right: 300px;
-    top: 40px;
+.myprofile {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+}
+.about {
+    margin-top:60px;
 }
 
-.myintro{
-    font-size:20px;
-    font-family: "Merriweather", serif;
-
-
+.about-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
 }
+
+.detail-item {
+  flex: 1 1 45%;
+}
+
+
+
+.about-parent {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f3f5f6;
+    width: 100%;
+    margin: 100px auto 0 auto;
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    }
+
+.my-img {
+  height: 200px;
+  border-radius: 40%;
+  flex-shrink: 0;
+}
+
+.myprofile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgba(51, 55, 60, 0.897);
+}
+.myintro {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* CURSOR animation*/
+.typing {
+    display: inline-block;
+    padding: 20px;
+    font-size: 50px;
+    color: rgba(229, 153, 22, 0.897);
+    animation: typing 3s steps(20, end), colorChange 3s ease-in-out infinite;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: rgb(147, 230, 141);
+    border-radius: 5px;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
 
 hr {
     border: dotted #eaf6f6 6px;
@@ -50,15 +117,7 @@ hr {
     margin: 100px auto;
 }
 
-.skills-parent {
-    display: grid;
-    grid-template-columns: 0.6fr 1fr;
-    grid-template-rows: repeat(1, 1fr);
-    width: 50%;
-    margin: 100px auto 0 auto;
-    text-align: left;
-    row-gap: 2rem;
-}
+
 .btn{
     border-radius: 8%;
     font-size: 20px;
@@ -69,22 +128,20 @@ hr {
     font-weight: bold;
 }
 
-.skills-img1 img, .skills-img3 img {
-    width: 70%;
+
+
+/* Grid for resume  */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
 }
-
-
-
-
-
-.VIB-model_page h1 {
-    color: black;
+.grid-item {
+ height:20px;
+ padding:100px;
 }
 
 .pipeline-img {
-    height: 450px;
     position: relative;
-    ;
 }
 .image-container {
     text-align: left;
@@ -96,3 +153,165 @@ hr {
   height: auto;
 }
 
+.resume-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  border-right: 1px solid #cccccc; /* Creates a vertical line */
+  padding-right: 20px;
+}
+
+
+/* Publications formatting*/
+
+.publications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.publication {
+  display: grid;
+  row-gap: 0.4rem;
+  align-content: start;
+  padding-bottom: 40px;
+}
+
+.pub-year {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.pub-title {
+  color: #1f5fbf;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.pub-authors .highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.pub-journal {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pub-tag {
+  display: inline-block;
+  background: #1a1a1a;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  width: fit-content;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+.resume-section {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.resume-section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr;  /* stack on mobile */
+  }
+}
+
+.resume-column-title {
+  font-size: 1.5rem;
+  font-family: "Noto Sans", serif;
+  color: #d6890e;
+  margin-bottom: 1.5rem;
+}
+
+/* --- TIMELINE --- */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  padding-left: 2rem;              /* space for dots and line */
+  border-left: 2px solid #d6890e;  /* the vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.6rem;                   /* pulls dot onto the line */
+  top: 0.4rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d6890e;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #d6890e;   /* ring effect */
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f5fbf;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 0.9rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
